@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: groundprobe-mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: zabbix
+      MYSQL_USER: zabbix
+      MYSQL_PASSWORD: zabbix_pass
+      MYSQL_ROOT_PASSWORD: root_pass
+    volumes:
+      - mysql-data:/var/lib/mysql
+    command: >
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_bin
+      --default-authentication-plugin=mysql_native_password
+    networks:
+      - zabbix-net
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-uroot", "-proot_pass"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  zabbix-server:
+    image: zabbix/zabbix-server-mysql:ubuntu-6.4-latest
+    container_name: groundprobe-zabbix-server
+    restart: always
+    environment:
+      DB_SERVER_HOST: mysql
+      MYSQL_DATABASE: zabbix
+      MYSQL_USER: zabbix
+      MYSQL_PASSWORD: zabbix_pass
+      MYSQL_ROOT_PASSWORD: root_pass
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - zabbix-net
+    ports:
+      - "10051:10051"
+
+  zabbix-web:
+    image: zabbix/zabbix-web-apache-mysql:ubuntu-6.4-latest
+    container_name: groundprobe-zabbix-web
+    restart: always
+    environment:
+      DB_SERVER_HOST: mysql
+      MYSQL_DATABASE: zabbix
+      MYSQL_USER: zabbix
+      MYSQL_PASSWORD: zabbix_pass
+      ZBX_SERVER_HOST: zabbix-server
+      PHP_TZ: Asia/Makassar
+    depends_on:
+      mysql:
+        condition: service_healthy
+      zabbix-server:
+        condition: service_started
+    networks:
+      - zabbix-net
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  zabbix-agent:
+    image: zabbix/zabbix-agent:ubuntu-6.4-latest
+    container_name: groundprobe-zabbix-agent
+    restart: always
+    environment:
+      ZBX_HOSTNAME: "Zabbix server"
+      ZBX_SERVER_HOST: zabbix-server
+    depends_on:
+      - zabbix-server
+    networks:
+      - zabbix-net
+
+volumes:
+  mysql-data:
+
+networks:
+  zabbix-net:
+    driver: bridge
