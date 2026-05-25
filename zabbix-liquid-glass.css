@@ -535,15 +535,24 @@ label {
    §23 — FOCUS RING
    ═══════════════════════════════════════════════ */
 :focus-visible { outline: 2px solid var(--accent) !important; outline-offset: 2px !important; }/* ═══════════════════════════════════════════════
+  /* ═══════════════════════════════════════════════
    §24 — COMPANY LOGO — LOGIN PAGE
    ═══════════════════════════════════════════════ */
 
-/* Hide the default Zabbix logo image */
-div.signin-logo img {
+/* Hide SEMUA gambar di signin-logo (termasuk logo Zabbix) */
+div.signin-logo img,
+div.signin-logo a img,
+.signin-logo img,
+a.logo img,
+img[src*="zabbix_logo"],
+img[src*="logo"] {
   display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
 }
 
-/* Inject company logo via pseudo-element on the container */
 div.signin-logo {
   text-align: center !important;
   margin-bottom: 28px !important;
@@ -562,32 +571,35 @@ div.signin-logo::after {
   background-repeat: no-repeat !important;
   background-size: contain !important;
   background-position: center !important;
-  filter: brightness(1.1) !important;
 }
-
 /* ═══════════════════════════════════════════════
    §25 — COMPANY LOGO — TOP NAV / DASHBOARD
    ═══════════════════════════════════════════════ */
 
-/* Hide default Zabbix nav logo */
+/* Hide logo Zabbix di sidebar/nav */
 .header-logo img,
 #header-logo img,
-.top-nav-logo img,
-a.logo img {
+a.logo img,
+.logo img,
+img[src*="zabbix_logo"],
+img[src*="logo.png"],
+img[alt="Zabbix"] {
   display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
-/* Replace with company logo */
+/* Inject company logo di sidebar */
+a.logo,
 .header-logo,
-#header-logo,
-.top-nav-logo,
-a.logo {
-  display: flex !important;
-  align-items: center !important;
-  min-width: 160px !important;
-  min-height: 36px !important;
+#header-logo {
+  display: block !important;
+  width: 160px !important;
+  height: 40px !important;
   background-image: url('/assets/img/company-logo.png') !important;
   background-repeat: no-repeat !important;
   background-size: contain !important;
   background-position: left center !important;
+  margin: 8px 12px !important;
 }
