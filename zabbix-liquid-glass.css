@@ -577,19 +577,14 @@ div.signin-logo::after {
    ═══════════════════════════════════════════════ */
 
 /* Hide logo Zabbix di sidebar/nav */
-.header-logo img,
-#header-logo img,
-a.logo img,
-.logo img,
-img[src*="zabbix_logo"],
-img[src*="logo.png"],
-img[alt="Zabbix"] {
+.sidebar-logo svg, .sidebar-logo img, .sidebar-logo > div,
+.logo svg, .logo img, .logo > div,
+.zabbix-sidebar-logo, .zabbix-sidebar-logo-compact {
   display: none !important;
   visibility: hidden !important;
   width: 0 !important;
   height: 0 !important;
 }
-
 /* Inject company logo di sidebar */
 a.logo,
 .header-logo,
