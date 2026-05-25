@@ -565,14 +565,16 @@ div.signin-logo {
 div.signin-logo::after {
   content: '' !important;
   display: block !important;
-  width: 220px !important;
-  height: 60px !important;
-  background-image: url('/assets/img/company-logo.png') !important;
+  width: 240px !important;
+  height: 70px !important;
+  background-image: url('/logo.png') !important;
+  background-color: rgba(255, 255, 255, 0.88) !important; /* Latar putih sedikit transparan */
   background-repeat: no-repeat !important;
-  background-size: contain !important;
+  background-size: 85% !important; /* Diperkecil sedikit agar ada sisa ruang/padding */
   background-position: center !important;
-}
-/* ═══════════════════════════════════════════════
+  border-radius: 12px !important; /* Ujungnya melengkung halus */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important; /* Bayangan mewah */
+}/* ═══════════════════════════════════════════════
    §25 — COMPANY LOGO — TOP NAV / DASHBOARD
    ═══════════════════════════════════════════════ */
 
@@ -585,18 +587,19 @@ div.signin-logo::after {
   width: 0 !important;
   height: 0 !important;
 }
-/* Inject company logo di sidebar */
-a.logo,
-.header-logo,
-#header-logo {
-  display: block !important;
-  width: 160px !important;
-  height: 40px !important;
+/* Inject company logo di sidebar (White Card) */
+.sidebar-logo, .logo, a.logo {
   background-image: url('/assets/img/company-logo.png') !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
   background-repeat: no-repeat !important;
-  background-size: contain !important;
-  background-position: left center !important;
-  margin: 8px 12px !important;
+  background-position: center !important;
+  background-size: 85% !important; 
+  display: block !important;
+  width: 150px !important;
+  height: 44px !important;
+  margin: 10px 14px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
 }
 .zabbix-logo {
   display: none !important;
