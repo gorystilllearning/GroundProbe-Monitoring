@@ -534,4 +534,60 @@ label {
 /* ═══════════════════════════════════════════════
    §23 — FOCUS RING
    ═══════════════════════════════════════════════ */
-:focus-visible { outline: 2px solid var(--accent) !important; outline-offset: 2px !important; }
+:focus-visible { outline: 2px solid var(--accent) !important; outline-offset: 2px !important; }/* ═══════════════════════════════════════════════
+   §24 — COMPANY LOGO — LOGIN PAGE
+   ═══════════════════════════════════════════════ */
+
+/* Hide the default Zabbix logo image */
+div.signin-logo img {
+  display: none !important;
+}
+
+/* Inject company logo via pseudo-element on the container */
+div.signin-logo {
+  text-align: center !important;
+  margin-bottom: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 60px !important;
+}
+
+div.signin-logo::after {
+  content: '' !important;
+  display: block !important;
+  width: 220px !important;
+  height: 60px !important;
+  background-image: url('/assets/img/company-logo.png') !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+  filter: brightness(1.1) !important;
+}
+
+/* ═══════════════════════════════════════════════
+   §25 — COMPANY LOGO — TOP NAV / DASHBOARD
+   ═══════════════════════════════════════════════ */
+
+/* Hide default Zabbix nav logo */
+.header-logo img,
+#header-logo img,
+.top-nav-logo img,
+a.logo img {
+  display: none !important;
+}
+
+/* Replace with company logo */
+.header-logo,
+#header-logo,
+.top-nav-logo,
+a.logo {
+  display: flex !important;
+  align-items: center !important;
+  min-width: 160px !important;
+  min-height: 36px !important;
+  background-image: url('/assets/img/company-logo.png') !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: left center !important;
+}
