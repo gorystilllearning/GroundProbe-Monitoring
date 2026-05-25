@@ -588,7 +588,9 @@ div.signin-logo::after {
   height: 0 !important;
 }
 /* Inject company logo di sidebar (White Card) */
-.sidebar-logo, .logo, a.logo {
+.sidebar-logo, .logo, a.logo,
+.sidebar-logo:hover, .logo:hover, a.logo:hover,
+.sidebar-logo:focus, .logo:focus, a.logo:focus {
   background-image: url('/assets/img/company-logo.png') !important;
   background-color: rgba(255, 255, 255, 0.9) !important;
   background-repeat: no-repeat !important;
