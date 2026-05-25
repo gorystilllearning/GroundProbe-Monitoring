@@ -567,7 +567,7 @@ div.signin-logo::after {
   display: block !important;
   width: 240px !important;
   height: 70px !important;
-  background-image: url('/logo.png') !important;
+  background-image: url('/assets/img/company-logo.png') !important;
   background-color: rgba(255, 255, 255, 0.88) !important; /* Latar putih sedikit transparan */
   background-repeat: no-repeat !important;
   background-size: 85% !important; /* Diperkecil sedikit agar ada sisa ruang/padding */
