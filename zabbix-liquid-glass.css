@@ -603,3 +603,6 @@ a.logo,
   background-position: left center !important;
   margin: 8px 12px !important;
 }
+.zabbix-logo {
+  display: none !important;
+}
