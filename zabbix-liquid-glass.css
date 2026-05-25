@@ -534,4 +534,75 @@ label {
 /* ═══════════════════════════════════════════════
    §23 — FOCUS RING
    ═══════════════════════════════════════════════ */
-:focus-visible { outline: 2px solid var(--accent) !important; outline-offset: 2px !important; }
+:focus-visible { outline: 2px solid var(--accent) !important; outline-offset: 2px !important; }/* ═══════════════════════════════════════════════
+  /* ═══════════════════════════════════════════════
+   §24 — COMPANY LOGO — LOGIN PAGE
+   ═══════════════════════════════════════════════ */
+
+/* Hide SEMUA gambar di signin-logo (termasuk logo Zabbix) */
+div.signin-logo img,
+div.signin-logo a img,
+.signin-logo img,
+a.logo img,
+img[src*="zabbix_logo"],
+img[src*="logo"] {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+}
+
+div.signin-logo {
+  text-align: center !important;
+  margin-bottom: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 60px !important;
+}
+
+div.signin-logo::after {
+  content: '' !important;
+  display: block !important;
+  width: 240px !important;
+  height: 70px !important;
+  background-image: url('/assets/img/company-logo.png') !important;
+  background-color: rgba(255, 255, 255, 0.88) !important; /* Latar putih sedikit transparan */
+  background-repeat: no-repeat !important;
+  background-size: 85% !important; /* Diperkecil sedikit agar ada sisa ruang/padding */
+  background-position: center !important;
+  border-radius: 12px !important; /* Ujungnya melengkung halus */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important; /* Bayangan mewah */
+}/* ═══════════════════════════════════════════════
+   §25 — COMPANY LOGO — TOP NAV / DASHBOARD
+   ═══════════════════════════════════════════════ */
+
+/* Hide logo Zabbix di sidebar/nav */
+.sidebar-logo svg, .sidebar-logo img, .sidebar-logo > div,
+.logo svg, .logo img, .logo > div,
+.zabbix-sidebar-logo, .zabbix-sidebar-logo-compact {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+/* Inject company logo di sidebar (White Card) */
+.sidebar-logo, .logo, a.logo,
+.sidebar-logo:hover, .logo:hover, a.logo:hover,
+.sidebar-logo:focus, .logo:focus, a.logo:focus {
+  background-image: url('/assets/img/company-logo.png') !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 85% !important; 
+  display: block !important;
+  width: 150px !important;
+  height: 44px !important;
+  margin: 10px 14px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+.zabbix-logo {
+  display: none !important;
+}
