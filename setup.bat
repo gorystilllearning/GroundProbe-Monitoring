@@ -6,13 +6,13 @@ REM ── Enable ANSI colors (Windows 10+) ────────────
 reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1 /f > nul 2>&1
 
 REM ── ANSI Color codes ──────────────────────────────────────
-set "GREEN=[32m"
-set "RED=[31m"
-set "YELLOW=[33m"
-set "CYAN=[36m"
-set "BLUE=[34m"
-set "BOLD=[1m"
-set "NC=[0m"
+set "GREEN="
+set "RED="
+set "YELLOW="
+set "CYAN="
+set "BLUE="
+set "BOLD="
+set "NC="
 
 REM ══════════════════════════════════════════════════════════
 REM   EMBEDDED LOGO (base64)
@@ -97,12 +97,11 @@ REM ── WAIT WITH COUNTDOWN ────────────────�
 echo.
 echo %BOLD%%BLUE%[3/5]%NC% Waiting for database initialization
 echo.
-set /a count=60
-:COUNTDOWN
-echo|set /p="  %CYAN%→%NC%  Please wait !count!s...   " & echo.
-timeout /t 1 /nobreak > nul
-set /a count-=1
-if !count! gtr 0 goto COUNTDOWN
+echo|set /p="  ->  Please wait 60 seconds "
+for /L %%i in (1,1,60) do (
+  timeout /t 1 /nobreak > nul
+  echo|set /p="."
+)
 echo   %GREEN%[OK]%NC% Database should be ready
 echo.
 
