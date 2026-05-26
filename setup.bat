@@ -109,7 +109,7 @@ REM ── APPLY THEME ───────────────────
 echo %BOLD%%BLUE%[4/5]%NC% Applying Liquid Glass theme
 echo.
 if exist "zabbix-liquid-glass.css" (
-  type zabbix-liquid-glass.css | docker exec -u root -i groundprobe-zabbix-web sh -c "cat >> /usr/share/zabbix/assets/styles/blue-theme.css"
+  type zabbix-liquid-glass.css | docker exec -u root -i groundprobe-zabbix-web sh -c "cat >> /usr/share/zabbix/assets/styles/dark-theme.css"
   if %errorlevel% equ 0 (
     echo   %GREEN%[OK]%NC% Theme injected successfully
   ) else (
