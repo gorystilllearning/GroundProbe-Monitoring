@@ -365,7 +365,6 @@ button, .btn, .button {
 }
 
 .sidebar a, .navigation-menu a {
-  background: transparent !important;
   color: var(--text-secondary) !important;
   font-family: var(--font-body) !important;
   border-radius: var(--r-xs) !important;
@@ -612,7 +611,7 @@ div.signin-logo::after {
 /* ═══════════════════════════════════════════════
    §26 — SIDEBAR SUBMENU (FLYOUT)
    ═══════════════════════════════════════════════ */
-.menu-main .submenu, .menu-user .submenu {
+.sidebar.is-compact:not(.is-opened) .submenu {
   background: var(--bg-elevated) !important;
   border: 1px solid var(--glass-border-hi) !important;
   border-radius: var(--r-md) !important;
@@ -620,15 +619,15 @@ div.signin-logo::after {
   padding: 6px !important;
 }
 
-.menu-main .submenu a, .menu-user .submenu a {
+.sidebar.is-compact:not(.is-opened) .submenu a {
   background: transparent !important;
   color: var(--text-primary) !important;
   border-radius: var(--r-xs) !important;
   transition: background var(--t-fast) !important;
 }
 
-.menu-main .submenu a:hover, .menu-user .submenu a:hover,
-.menu-main .submenu a:focus, .menu-user .submenu a:focus {
+.sidebar.is-compact:not(.is-opened) .submenu a:hover,
+.sidebar.is-compact:not(.is-opened) .submenu a:focus {
   background: var(--glass-strong) !important;
   color: #fff !important;
 }
