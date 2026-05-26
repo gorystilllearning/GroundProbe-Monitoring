@@ -506,6 +506,7 @@ label {
 }
 
 .menu-popup .menu-popup-item, .dropdown-item {
+  background: transparent !important;
   color: var(--text-primary) !important;
   font-family: var(--font-body) !important;
   font-size: 13px !important;
