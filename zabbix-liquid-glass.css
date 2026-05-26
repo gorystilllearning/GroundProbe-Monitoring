@@ -611,7 +611,6 @@ div.signin-logo::after {
 /* ═══════════════════════════════════════════════
    §26 — SIDEBAR SUBMENU (FLYOUT)
    ═══════════════════════════════════════════════ */
-.sidebar.is-compact:not(.is-opened) .submenu,
 .menu-main .submenu .submenu,
 .menu-user .submenu .submenu {
   background: var(--bg-elevated) !important;
@@ -621,7 +620,6 @@ div.signin-logo::after {
   padding: 6px !important;
 }
 
-.sidebar.is-compact:not(.is-opened) .submenu a,
 .menu-main .submenu .submenu a,
 .menu-user .submenu .submenu a {
   background: transparent !important;
@@ -630,8 +628,6 @@ div.signin-logo::after {
   transition: background var(--t-fast) !important;
 }
 
-.sidebar.is-compact:not(.is-opened) .submenu a:hover,
-.sidebar.is-compact:not(.is-opened) .submenu a:focus,
 .menu-main .submenu .submenu a:hover,
 .menu-main .submenu .submenu a:focus,
 .menu-user .submenu .submenu a:hover,
