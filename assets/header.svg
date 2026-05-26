@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" rx="15" />
+  
+  <!-- Glowing Orbs -->
+  <circle cx="200" cy="125" r="80" fill="#6366f1" opacity="0.3" filter="url(#glow-heavy)" />
+  <circle cx="600" cy="125" r="80" fill="#a855f7" opacity="0.3" filter="url(#glow-heavy)" />
+
+  <!-- Grid Pattern overlay -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#grid)" rx="15" />
+
+  <!-- Corner Accents -->
+  <path d="M 30 50 L 30 30 L 50 30" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <path d="M 770 50 L 770 30 L 750 30" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <path d="M 30 200 L 30 220 L 50 220" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <path d="M 770 200 L 770 220 L 750 220" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+
+  <!-- Particles -->
+  <circle cx="150" cy="50" r="2" fill="#fff" opacity="0.5" />
+  <circle cx="650" cy="200" r="1.5" fill="#fff" opacity="0.3" />
+  <circle cx="700" cy="80" r="2" fill="#fff" opacity="0.6" />
+  <circle cx="100" cy="180" r="2.5" fill="#fff" opacity="0.4" />
+
+  <!-- Main Title -->
+  <text x="50%" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="64" font-weight="900" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" filter="url(#glow)">GroundProbe</text>
+  
+  <!-- Subtitle -->
+  <text x="50%" y="180" font-family="monospace" font-size="14" font-weight="400" fill="#a5b4fc" text-anchor="middle" letter-spacing="4">E X T E R N A L   M O N I T O R I N G   S Y S T E M</text>
+  
+</svg>
