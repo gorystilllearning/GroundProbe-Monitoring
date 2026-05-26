@@ -365,6 +365,7 @@ button, .btn, .button {
 }
 
 .sidebar a, .navigation-menu a {
+  background: transparent !important;
   color: var(--text-secondary) !important;
   font-family: var(--font-body) !important;
   border-radius: var(--r-xs) !important;
