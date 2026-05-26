@@ -607,3 +607,27 @@ div.signin-logo::after {
 .zabbix-logo {
   display: none !important;
 }
+
+/* ═══════════════════════════════════════════════
+   §26 — SIDEBAR SUBMENU (FLYOUT)
+   ═══════════════════════════════════════════════ */
+.menu-main .submenu, .menu-user .submenu {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--glass-border-hi) !important;
+  border-radius: var(--r-md) !important;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.6) !important;
+  padding: 6px !important;
+}
+
+.menu-main .submenu a, .menu-user .submenu a {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--r-xs) !important;
+  transition: background var(--t-fast) !important;
+}
+
+.menu-main .submenu a:hover, .menu-user .submenu a:hover,
+.menu-main .submenu a:focus, .menu-user .submenu a:focus {
+  background: var(--glass-strong) !important;
+  color: #fff !important;
+}
