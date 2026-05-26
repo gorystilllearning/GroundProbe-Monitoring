@@ -278,7 +278,7 @@ input[type="password"],
 input[type="email"],
 input[type="search"],
 input[type="number"],
-textarea, select {
+textarea, select, .multiselect-control {
   background: rgba(255,255,255,0.06) !important;
   border: 1px solid var(--glass-border) !important;
   border-radius: var(--r-sm) !important;
@@ -293,10 +293,23 @@ textarea, select {
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
-textarea:focus, select:focus {
+textarea:focus, select:focus, .multiselect-control.active {
   background: rgba(255,255,255,0.09) !important;
   border-color: var(--accent) !important;
   box-shadow: 0 0 0 3px var(--accent-dim) !important;
+}
+
+/* Fix inner multiselect input double-bubble */
+.multiselect input[type="text"] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.multiselect input[type="text"]:focus {
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 /* ═══════════════════════════════════════════════
