@@ -611,7 +611,9 @@ div.signin-logo::after {
 /* ═══════════════════════════════════════════════
    §26 — SIDEBAR SUBMENU (FLYOUT)
    ═══════════════════════════════════════════════ */
-.sidebar.is-compact:not(.is-opened) .submenu {
+.sidebar.is-compact:not(.is-opened) .submenu,
+.menu-main .submenu .submenu,
+.menu-user .submenu .submenu {
   background: var(--bg-elevated) !important;
   border: 1px solid var(--glass-border-hi) !important;
   border-radius: var(--r-md) !important;
@@ -619,7 +621,9 @@ div.signin-logo::after {
   padding: 6px !important;
 }
 
-.sidebar.is-compact:not(.is-opened) .submenu a {
+.sidebar.is-compact:not(.is-opened) .submenu a,
+.menu-main .submenu .submenu a,
+.menu-user .submenu .submenu a {
   background: transparent !important;
   color: var(--text-primary) !important;
   border-radius: var(--r-xs) !important;
@@ -627,7 +631,11 @@ div.signin-logo::after {
 }
 
 .sidebar.is-compact:not(.is-opened) .submenu a:hover,
-.sidebar.is-compact:not(.is-opened) .submenu a:focus {
+.sidebar.is-compact:not(.is-opened) .submenu a:focus,
+.menu-main .submenu .submenu a:hover,
+.menu-main .submenu .submenu a:focus,
+.menu-user .submenu .submenu a:hover,
+.menu-user .submenu .submenu a:focus {
   background: var(--glass-strong) !important;
   color: #fff !important;
 }
