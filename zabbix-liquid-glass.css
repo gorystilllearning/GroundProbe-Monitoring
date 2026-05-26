@@ -377,7 +377,7 @@ button, .btn, .button {
 /* ═══════════════════════════════════════════════
    §15 — DASHBOARD WIDGETS
    ═══════════════════════════════════════════════ */
-.dashboard-widget, .dashbrd-grid-new-widget, .card, .widget {
+.dashboard-widget, .dashbrd-grid-new-widget, .card, .widget, .dashbrd-grid-widget {
   background: var(--glass-light) !important;
   backdrop-filter: blur(8px) saturate(150%) !important;
   -webkit-backdrop-filter: blur(8px) saturate(150%) !important;
@@ -387,12 +387,12 @@ button, .btn, .button {
   transition: box-shadow var(--t-mid), transform var(--t-mid) !important;
 }
 
-.dashboard-widget:hover, .dashbrd-grid-new-widget:hover {
+.dashboard-widget:hover, .dashbrd-grid-new-widget:hover, .dashbrd-grid-widget:hover {
   box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px var(--glass-border-hi) !important;
   transform: translateY(-1px) !important;
 }
 
-.dashboard-widget-head {
+.dashboard-widget-head, .dashbrd-grid-widget-head {
   background: rgba(255,255,255,0.04) !important;
   border-bottom: 1px solid var(--glass-border) !important;
   border-radius: var(--r-md) var(--r-md) 0 0 !important;
