@@ -497,7 +497,7 @@ label {
 /* ═══════════════════════════════════════════════
    §20 — DROPDOWNS
    ═══════════════════════════════════════════════ */
-.menu-popup ul, .dropdown-menu {
+.menu-popup, .dropdown-menu {
   background: var(--bg-elevated) !important;
   border: 1px solid var(--glass-border-hi) !important;
   border-radius: var(--r-md) !important;
@@ -505,7 +505,7 @@ label {
   padding: 6px !important;
 }
 
-.menu-popup ul li a, .dropdown-item {
+.menu-popup .menu-popup-item, .dropdown-item {
   color: var(--text-primary) !important;
   font-family: var(--font-body) !important;
   font-size: 13px !important;
@@ -514,7 +514,7 @@ label {
   transition: background var(--t-fast) !important;
 }
 
-.menu-popup ul li a:hover, .dropdown-item:hover { background: var(--glass-strong) !important; color: #fff !important; }
+.menu-popup .menu-popup-item:hover, .dropdown-item:hover { background: var(--glass-strong) !important; color: #fff !important; }
 
 /* ═══════════════════════════════════════════════
    §21 — NOTIFICATIONS
