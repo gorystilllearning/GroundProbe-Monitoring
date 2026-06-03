@@ -21,22 +21,19 @@
 
 ## 🚀 Installation Guide
 
-### For Windows Users:
+### Prerequisites
 1. Ensure **Docker Desktop** is installed and running.
-2. Download or clone this repository.
-3. Double-click the `setup.bat` file.
-4. Wait for the terminal process to finish.
+2. Because the Docker Image is hosted privately on GitHub Packages, you must authenticate first using your GitHub Personal Access Token (PAT):
+   ```bash
+   echo <YOUR_GH_TOKEN> | docker login ghcr.io -u gorystilllearning --password-stdin
+   ```
 
-### For Mac / Linux Users:
-1. Open your terminal and navigate to this repository's folder.
-2. Make the script executable: 
-   ```bash
-   chmod +x setup.sh
-   ```
-3. Execute the installer:
-   ```bash
-   bash setup.sh
-   ```
+### Quick Start
+Simply run the following command in the directory containing the `docker-compose.yml` file:
+```bash
+docker compose up -d
+```
+That's it! The custom CSS and logos are already baked into the multi-architecture Docker image.
 
 ## 🌐 Dashboard Access
 

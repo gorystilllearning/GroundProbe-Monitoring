@@ -43,7 +43,7 @@ services:
       - "10051:10051"
 
   zabbix-web:
-    image: zabbix/zabbix-web-apache-mysql:ubuntu-6.4-latest
+    image: ghcr.io/gorystilllearning/groundprobe-zabbix-web:latest
     container_name: groundprobe-zabbix-web
     restart: always
     environment:
