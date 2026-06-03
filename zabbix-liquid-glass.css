@@ -647,3 +647,29 @@ div.signin-logo::after {
   background: var(--glass-strong) !important;
   color: #fff !important;
 }
+
+/* ═══════════════════════════════════════════════
+   §28 — DASHBOARD HEADER VISIBILITY
+   ═══════════════════════════════════════════════ */
+.header-title,
+.dashboard-navigation,
+.dashbrd-edit {
+  background: rgba(20, 25, 32, 0.75) !important;
+  backdrop-filter: blur(16px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(150%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0 0 12px 12px !important;
+  padding: 10px 20px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.header-title h1, 
+.header-title span,
+.dashboard-navigation span {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8) !important;
+}
