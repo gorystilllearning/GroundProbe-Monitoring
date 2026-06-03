@@ -61,10 +61,10 @@ REM ── WAIT WITH COUNTDOWN ────────────────�
 echo.
 echo [3/3] Waiting for database initialization
 echo.
-echo^|set /p="--^> Please wait 30 seconds "
+<nul set /p="--^> Please wait 30 seconds "
 for /L %%i in (1,1,30) do (
   timeout /t 1 /nobreak > nul
-  echo^|set /p="."
+  <nul set /p="."
 )
 echo [OK] System is ready
 echo.
