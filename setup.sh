@@ -19,12 +19,12 @@ echo "  |       PT GroundProbe Indonesia                            |"
 echo "  |                                                           |"
 echo "  +===========================================================+"
 echo -e "${NC}"
-echo "  Target  : Zabbix 6.4 + Liquid Glass Theme (ghcr.io Image)"
+echo "  Target  : Zabbix 6.4 + Liquid Glass Theme (Local Build)"
 echo "  Access  : http://localhost:8080"
 echo ""
 
 # ── PRE-FLIGHT CHECKS ───────────────────────────────────────
-echo -e "${BOLD}${BLUE}[1/4]${NC} Pre-flight checks"
+echo -e "${BOLD}${BLUE}[1/3]${NC} Pre-flight checks"
 echo ""
 
 if ! command -v docker &> /dev/null; then
@@ -51,9 +51,9 @@ echo -e "  ${GREEN}[OK]${NC} docker-compose.yml found"
 echo ""
 
 # ── START SERVICES ──────────────────────────────────────────
-echo -e "${BOLD}${BLUE}[2/3]${NC} Starting Docker services"
+echo -e "${BOLD}${BLUE}[2/3]${NC} Building image and starting Docker services"
 echo ""
-if ! docker compose up -d; then
+if ! docker compose up -d --build; then
     echo ""
     echo -e "  ${RED}[X]${NC} Failed to start services"
     exit 1

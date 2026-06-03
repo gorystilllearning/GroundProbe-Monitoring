@@ -43,7 +43,8 @@ services:
       - "10051:10051"
 
   zabbix-web:
-    image: ghcr.io/gorystilllearning/groundprobe-zabbix-web:latest
+    build: .
+    image: groundprobe-zabbix-web:local
     container_name: groundprobe-zabbix-web
     restart: always
     environment:
