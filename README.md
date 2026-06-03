@@ -23,10 +23,6 @@
 
 ### Prerequisites
 1. Ensure **Docker Desktop** is installed and running.
-2. Because the Docker Image is hosted privately on GitHub Packages, you must authenticate first using your GitHub Personal Access Token (PAT):
-   ```bash
-   echo <YOUR_GH_TOKEN> | docker login ghcr.io -u gorystilllearning --password-stdin
-   ```
 
 ### Quick Start
 Simply run the following command in the directory containing the `docker-compose.yml` file:

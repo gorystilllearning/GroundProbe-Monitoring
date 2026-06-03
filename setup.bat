@@ -62,30 +62,8 @@ if not exist "docker-compose.yml" (
 echo   %GREEN%[OK]%NC% docker-compose.yml found
 echo.
 
-REM ── AUTHENTICATION ───────────────────────────────────────
-echo %BOLD%%BLUE%[2/4]%NC% GitHub Packages Authentication
-echo.
-echo Please enter your GitHub Personal Access Token (PAT)
-echo to authenticate and pull the private Docker image.
-set /p GH_TOKEN="GitHub PAT: "
-
-if "%GH_TOKEN%"=="" (
-    echo   %RED%[X]%NC% Token cannot be empty!
-    pause
-    exit /b 1
-)
-
-echo !GH_TOKEN! | docker login ghcr.io -u gorystilllearning --password-stdin > nul 2>&1
-if %errorlevel% neq 0 (
-    echo   %RED%[X]%NC% Login failed. Please check your token.
-    pause
-    exit /b 1
-)
-echo   %GREEN%[OK]%NC% Successfully authenticated with ghcr.io
-echo.
-
 REM ── START SERVICES ───────────────────────────────────────
-echo %BOLD%%BLUE%[3/4]%NC% Starting Docker services
+echo %BOLD%%BLUE%[2/3]%NC% Starting Docker services
 echo.
 docker compose up -d
 if %errorlevel% neq 0 (
@@ -99,7 +77,7 @@ echo   %GREEN%[OK]%NC% All containers started
 
 REM ── WAIT WITH COUNTDOWN ──────────────────────────────────
 echo.
-echo %BOLD%%BLUE%[4/4]%NC% Waiting for database initialization
+echo %BOLD%%BLUE%[3/3]%NC% Waiting for database initialization
 echo.
 echo|set /p="  ->  Please wait 30 seconds "
 for /L %%i in (1,1,30) do (

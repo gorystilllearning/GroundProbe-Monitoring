@@ -50,27 +50,8 @@ fi
 echo -e "  ${GREEN}[OK]${NC} docker-compose.yml found"
 echo ""
 
-# ── AUTHENTICATION ──────────────────────────────────────────
-echo -e "${BOLD}${BLUE}[2/4]${NC} GitHub Packages Authentication"
-echo ""
-echo "Please enter your GitHub Personal Access Token (PAT)"
-echo "to authenticate and pull the private Docker image."
-read -p "GitHub PAT: " GH_TOKEN
-
-if [ -z "$GH_TOKEN" ]; then
-    echo -e "  ${RED}[X]${NC} Token cannot be empty!"
-    exit 1
-fi
-
-if ! echo "$GH_TOKEN" | docker login ghcr.io -u gorystilllearning --password-stdin > /dev/null 2>&1; then
-    echo -e "  ${RED}[X]${NC} Login failed. Please check your token."
-    exit 1
-fi
-echo -e "  ${GREEN}[OK]${NC} Successfully authenticated with ghcr.io"
-echo ""
-
 # ── START SERVICES ──────────────────────────────────────────
-echo -e "${BOLD}${BLUE}[3/4]${NC} Starting Docker services"
+echo -e "${BOLD}${BLUE}[2/3]${NC} Starting Docker services"
 echo ""
 if ! docker compose up -d; then
     echo ""
@@ -82,7 +63,7 @@ echo -e "  ${GREEN}[OK]${NC} All containers started"
 
 # ── WAIT WITH COUNTDOWN ─────────────────────────────────────
 echo ""
-echo -e "${BOLD}${BLUE}[4/4]${NC} Waiting for database initialization"
+echo -e "${BOLD}${BLUE}[3/3]${NC} Waiting for database initialization"
 echo ""
 echo -n "  ->  Please wait 30 seconds "
 for i in {1..30}; do
