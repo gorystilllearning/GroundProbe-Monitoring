@@ -75,11 +75,6 @@ body {
    §3 — LOGIN PAGE WRAPPER
    ═══════════════════════════════════════════════ */
 body > div.wrapper {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-height: 100vh !important;
   background: transparent !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -89,6 +84,7 @@ body > div.wrapper {
    §4 — SIGNIN CONTAINER
    ═══════════════════════════════════════════════ */
 div.signin-container {
+  margin: 10vh auto !important;
   background: rgba(255,255,255,0.07) !important;
   backdrop-filter: blur(28px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
@@ -652,8 +648,7 @@ div.signin-logo::after {
    §28 — DASHBOARD HEADER VISIBILITY
    ═══════════════════════════════════════════════ */
 .header-title,
-.dashboard-navigation,
-.dashbrd-edit {
+.dashboard-navigation {
   background: rgba(20, 25, 32, 0.75) !important;
   backdrop-filter: blur(16px) saturate(150%) !important;
   -webkit-backdrop-filter: blur(16px) saturate(150%) !important;
