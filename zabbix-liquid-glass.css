@@ -533,9 +533,9 @@ label {
 /* ═══════════════════════════════════════════════
    §21 — NOTIFICATIONS
    ═══════════════════════════════════════════════ */
-.msg-good, .notice-ok   { background: rgba(61,255,160,0.10)  !important; border: 1px solid rgba(61,255,160,0.25) !important; color: var(--success) !important; border-radius: var(--r-sm) !important; padding: 10px 16px !important; }
-.msg-bad, .notice-error  { background: rgba(255,77,109,0.10)  !important; border: 1px solid rgba(255,77,109,0.25)  !important; color: var(--danger)  !important; border-radius: var(--r-sm) !important; padding: 10px 16px !important; }
-.msg-warning             { background: rgba(255,179,71,0.10)  !important; border: 1px solid rgba(255,179,71,0.25)  !important; color: var(--warning) !important; border-radius: var(--r-sm) !important; padding: 10px 16px !important; }
+.msg-good, .notice-ok   { background: rgba(61,255,160,0.10)  !important; border: 1px solid rgba(61,255,160,0.25) !important; color: var(--success) !important; border-radius: var(--r-sm) !important; }
+.msg-bad, .notice-error  { background: rgba(255,77,109,0.10)  !important; border: 1px solid rgba(255,77,109,0.25)  !important; color: var(--danger)  !important; border-radius: var(--r-sm) !important; }
+.msg-warning             { background: rgba(255,179,71,0.10)  !important; border: 1px solid rgba(255,179,71,0.25)  !important; color: var(--warning) !important; border-radius: var(--r-sm) !important; }
 
 /* ═══════════════════════════════════════════════
    §22 — SCROLLBARS
