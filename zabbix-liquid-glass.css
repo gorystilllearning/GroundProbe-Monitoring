@@ -616,7 +616,6 @@ div.signin-logo::after {
 /* ═══════════════════════════════════════════════
    §26 — BRANDING REMOVAL & FOOTER
    ═══════════════════════════════════════════════ */
-footer,
 .server-name,
 .signin-links {
   display: none !important;
