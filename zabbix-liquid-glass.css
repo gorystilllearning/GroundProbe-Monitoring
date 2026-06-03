@@ -284,8 +284,6 @@ textarea, select, .multiselect-control {
   border-radius: var(--r-sm) !important;
   color: var(--text-primary) !important;
   font-family: var(--font-body) !important;
-  font-size: 13.5px !important;
-  padding: 9px 13px !important;
   outline: none !important;
   transition: border-color var(--t-fast), box-shadow var(--t-fast) !important;
 }
@@ -428,7 +426,6 @@ table thead th {
   font-weight: 600 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.1em !important;
-  padding: 10px 14px !important;
   border-bottom: 1px solid var(--glass-border) !important;
   font-family: var(--font-body) !important;
   background: rgba(255,255,255,0.03) !important;
@@ -440,7 +437,6 @@ table tbody tr:hover { background: var(--glass-mid) !important; }
 
 table tbody td {
   color: var(--text-primary) !important;
-  padding: 9px 14px !important;
   border-bottom: 1px solid rgba(255,255,255,0.04) !important;
   font-size: 13px !important;
   font-family: var(--font-body) !important;
@@ -470,8 +466,6 @@ table tbody td a:hover { color: #fff !important; }
   background: var(--glass-light) !important;
   border: 1px solid var(--glass-border) !important;
   border-radius: var(--r-md) !important;
-  padding: 20px !important;
-  margin-bottom: 16px !important;
 }
 
 fieldset legend {
@@ -515,7 +509,6 @@ label {
   border: 1px solid var(--glass-border-hi) !important;
   border-radius: var(--r-md) !important;
   box-shadow: 0 16px 48px rgba(0,0,0,0.6) !important;
-  padding: 6px !important;
 }
 
 .menu-popup .menu-popup-item, .dropdown-item {
@@ -524,7 +517,6 @@ label {
   font-family: var(--font-body) !important;
   font-size: 13px !important;
   border-radius: var(--r-xs) !important;
-  padding: 8px 12px !important;
   transition: background var(--t-fast) !important;
 }
 
@@ -639,7 +631,6 @@ footer,
   border: 1px solid var(--glass-border-hi) !important;
   border-radius: var(--r-md) !important;
   box-shadow: 0 16px 48px rgba(0,0,0,0.6) !important;
-  padding: 6px !important;
 }
 
 .menu-main .submenu .submenu a,
